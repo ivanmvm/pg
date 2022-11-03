@@ -18,7 +18,11 @@ import java.util.Scanner;
 public class EX6 {
 
     private static final String MSG_1 = "Introdueix un any i un mes:";
-
+    private static final String MSG_2 = "El mes te 29 dies";
+    private static final String MSG_3 = "El mes te 28 dies";
+    private static final String MSG_4 = "El mes te 30 dies";
+    private static final String MSG_5 = "El mes te 31 dies";
+    
     public static void main(String[] args) {
         //EX6_a
         int any, mes, answerCase;
@@ -29,15 +33,15 @@ public class EX6 {
         if (mes % 2 == 0) {
             if (mes == 2) {
                 if (any % 4 == 0) {
-                    System.out.println("El mes té 29 dies");
+                    System.out.println(MSG_2);
                 } else {
-                    System.out.println("El mes té 28 dies");
+                    System.out.println(MSG_3);
                 }
             } else {
-                System.out.println("El mes té 30 dies");
+                System.out.println(MSG_4);
             }
         } else {
-            System.out.println("El mes té 31 dies");
+            System.out.println(MSG_5);
         }
         //EX6_b
         System.out.println(MSG_1);
@@ -60,16 +64,16 @@ public class EX6 {
 
         switch (answerCase) {
             case 1:
-                System.out.println("Té 28 dies");
+                System.out.println(MSG_2);
                 break;
             case 2:
-                System.out.println("Ré 29 dias");
+                System.out.println(MSG_3);
                 break;
             case 3:
-                System.out.println("Té 30 dias");
+                System.out.println(MSG_4);
                 break;
             case 4:
-                System.out.println("Té 31 dias");
+                System.out.println(MSG_5);
                 break;
         }
     }
